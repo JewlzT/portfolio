@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
+      <div className='separator'></div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
