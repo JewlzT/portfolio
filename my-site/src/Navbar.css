@@ -24,3 +24,11 @@
     color: #fff;
     text-decoration: none;
 }
+
+.nav-tabs{
+    font-size: x-large;
+}
+
+.nav-tabs li:hover{
+    font-weight: bold;
+}

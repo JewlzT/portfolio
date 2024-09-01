@@ -8,7 +8,7 @@ const Navbar = () => {
 
 <nav className="navbar">
 <div className="navbar-left">
-    <img src={logo} alt="image"/>    
+    <img src={logo} alt="cloud logo"/>    
   </div>
   <div className="navbar-right">
     <ul className="nav-tabs">
