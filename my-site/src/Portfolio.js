@@ -1,10 +1,10 @@
-import './Home.css';
+import './Portfolio.css';
 import React from 'react';
 import profile from './images/profile.png'
 import reveal from './images/reveal.png'
 import cloud from './images/cloud.svg'
 
-function Home() {
+function Portfolio() {
     return (
     <div className="Home">
         <header className="Home-header">
@@ -49,4 +49,4 @@ function Home() {
     );
   }
   
-  export default Home;
+  export default Portfolio;
