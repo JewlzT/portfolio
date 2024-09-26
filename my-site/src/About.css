@@ -1,0 +1,54 @@
+.about-p{
+    font-size: 16px;
+}
+
+.about-h3{
+    text-align: left;
+}
+
+.about-h5{
+    margin: 0;
+}
+
+.about-h3 a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-h3 a:hover{
+    font-size: 34px;
+}
+
+.Home {
+    text-align: center;
+  }
+  
+  .Home-content {
+    background-color: #15151E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 20px;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+    padding: 20px;
+  }
+  
+  .grid-item {
+    padding: 10px; 
+  }
+  
+  .Home-separator {
+    width: 95%;
+    height: 2px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    transform: translate(5vh, 0%);
+    position: absolute;
+  }
