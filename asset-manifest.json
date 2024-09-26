@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.540c73e3.css",
-    "main.js": "/portfolio/static/js/main.57271c0a.js",
+    "main.css": "/portfolio/static/css/main.44549a1a.css",
+    "main.js": "/portfolio/static/js/main.a1405433.js",
     "static/js/453.209d4f9d.chunk.js": "/portfolio/static/js/453.209d4f9d.chunk.js",
     "static/media/galactic_vid.mp4": "/portfolio/static/media/galactic_vid.a753b7bcbfa40cb382e8.mp4",
     "static/media/registration_page.mp4": "/portfolio/static/media/registration_page.c8a96517959dd5ba0533.mp4",
     "static/media/login_page.mp4": "/portfolio/static/media/login_page.d2e478447419e24bb4b4.mp4",
     "static/media/sched_vid1_poster.png": "/portfolio/static/media/sched_vid1_poster.86aad2b9960840c6558e.png",
+    "static/media/profile3.png": "/portfolio/static/media/profile3.cf8de8eb44de3c3f7970.png",
     "static/media/caro_galactic.png": "/portfolio/static/media/caro_galactic.83ceb7d1bce31bf2b1a2.png",
     "static/media/galactic.png": "/portfolio/static/media/galactic.b00a46a56bde321e1e70.png",
     "static/media/profile.png": "/portfolio/static/media/profile.de9eb542cdaed6258916.png",
@@ -23,12 +24,12 @@
     "static/media/vsc_logo.webp": "/portfolio/static/media/vsc_logo.163e3d9c0578bd1b82f0.webp",
     "static/media/cloud.svg": "/portfolio/static/media/cloud.a0ee69c20395a82b6012018ba243adcd.svg",
     "index.html": "/portfolio/index.html",
-    "main.540c73e3.css.map": "/portfolio/static/css/main.540c73e3.css.map",
-    "main.57271c0a.js.map": "/portfolio/static/js/main.57271c0a.js.map",
+    "main.44549a1a.css.map": "/portfolio/static/css/main.44549a1a.css.map",
+    "main.a1405433.js.map": "/portfolio/static/js/main.a1405433.js.map",
     "453.209d4f9d.chunk.js.map": "/portfolio/static/js/453.209d4f9d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.540c73e3.css",
-    "static/js/main.57271c0a.js"
+    "static/css/main.44549a1a.css",
+    "static/js/main.a1405433.js"
   ]
 }
