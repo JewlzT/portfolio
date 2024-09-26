@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.44549a1a.css",
-    "main.js": "/portfolio/static/js/main.a1405433.js",
+    "main.css": "/portfolio/static/css/main.83128a1c.css",
+    "main.js": "/portfolio/static/js/main.46a39099.js",
     "static/js/453.209d4f9d.chunk.js": "/portfolio/static/js/453.209d4f9d.chunk.js",
     "static/media/galactic_vid.mp4": "/portfolio/static/media/galactic_vid.a753b7bcbfa40cb382e8.mp4",
     "static/media/registration_page.mp4": "/portfolio/static/media/registration_page.c8a96517959dd5ba0533.mp4",
@@ -20,16 +20,19 @@
     "static/media/css_logo.png": "/portfolio/static/media/css_logo.2900859d21ce0764f14a.png",
     "static/media/html_logo.png": "/portfolio/static/media/html_logo.2b930c366d74a2969354.png",
     "static/media/github_logo.png": "/portfolio/static/media/github_logo.d786b4fc1ae1c9119b72.png",
+    "static/media/phone-cloud.png": "/portfolio/static/media/phone-cloud.4cc667caf7a6f2febc96.png",
+    "static/media/mail-cloud.png": "/portfolio/static/media/mail-cloud.396bb0a3aa9e06ce12ec.png",
+    "static/media/link-cloud.png": "/portfolio/static/media/link-cloud.612ebf9a21ecd2d16063.png",
     "static/media/figma_logo.webp": "/portfolio/static/media/figma_logo.2a9f7efeebad36e38284.webp",
     "static/media/vsc_logo.webp": "/portfolio/static/media/vsc_logo.163e3d9c0578bd1b82f0.webp",
     "static/media/cloud.svg": "/portfolio/static/media/cloud.a0ee69c20395a82b6012018ba243adcd.svg",
     "index.html": "/portfolio/index.html",
-    "main.44549a1a.css.map": "/portfolio/static/css/main.44549a1a.css.map",
-    "main.a1405433.js.map": "/portfolio/static/js/main.a1405433.js.map",
+    "main.83128a1c.css.map": "/portfolio/static/css/main.83128a1c.css.map",
+    "main.46a39099.js.map": "/portfolio/static/js/main.46a39099.js.map",
     "453.209d4f9d.chunk.js.map": "/portfolio/static/js/453.209d4f9d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44549a1a.css",
-    "static/js/main.a1405433.js"
+    "static/css/main.83128a1c.css",
+    "static/js/main.46a39099.js"
   ]
 }
