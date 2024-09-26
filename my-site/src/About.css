@@ -1,5 +1,5 @@
 .about-p{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .about-h3{
@@ -28,7 +28,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
     padding-top: 20px;
     font-size: calc(10px + 2vmin);
     color: white;
@@ -37,7 +36,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px; 
+    gap: 0px; 
     padding: 20px;
   }
   
