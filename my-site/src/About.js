@@ -37,7 +37,7 @@ function About() {
           <h5 className="about-h5">Proficient Languages: Java, JavaScript, and Python</h5>
           <h5 className="about-h5">Currently Working On: Improving the project section of my portfolio.</h5>
           <h5 className="about-h5">New Ventures: Studying Unity and Artifical Intelligence for Senior Design Project</h5>
-          <h5 className="about-h5">Clubs/Organizations: I am the Vice President of Girls Who Code.</h5>
+          <h5 className="about-h5">Clubs/Organizations: I am the vice president of Girls Who Code.</h5>
           <h5 className="about-h5">Other interests: I love dancing! I do Zumba and dance exercise on the side.</h5>
           <h3 className="about-h3">
             <Link to="/contact">Feel free to reach out and tell me about yourself!</Link> 
