@@ -15,7 +15,7 @@ function Contact() {
             <a href="mailto:julianne.tom1@gmail.com"><img className ="floating1" src={cloud_contact1} alt="mail link" /></a>
           </div>
           <div className = "grid-item">
-            <a href="https://www.linkedin.com/in/julianne-tomlinson-807852261/" target="_blank" rel="noopener noreferrer"><img className ="floating2" src={cloud_contact2} alt="linkedin link" /></a>
+            <a href="https://www.linkedin.com/in/julianne-tomlinson" target="_blank" rel="noopener noreferrer"><img className ="floating2" src={cloud_contact2} alt="linkedin link" /></a>
           </div>
         </div>
         <a href="tel:+5619062283"><img className ="floating3" src={cloud_contact3} alt="phone link" /></a>

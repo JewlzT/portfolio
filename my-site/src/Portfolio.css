@@ -155,7 +155,7 @@
   .reveal-animation::before {
     content: '';
     position: absolute;
-    top: 140px;
+    top: 85px;
     width: 20%;
     height: 60%; 
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);

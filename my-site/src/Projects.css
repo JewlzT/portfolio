@@ -98,6 +98,10 @@
     opacity: .6; 
 }
 
+#portfolio:hover{
+  opacity: .6; 
+}
+
 .image-container{
     position: relative;
     display: flex;
@@ -134,6 +138,10 @@
 .floating-galactic{
     animation: float3 4s ease-in-out infinite; 
 }
+
+.floating-portfolio{
+  animation: float4 3.5s ease-in-out infinite; 
+}
   
 @keyframes float1 {
     0%, 100% {
@@ -161,6 +169,16 @@
       transform: translateY(25px); 
     }
 }
+
+@keyframes float4 {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(18px); 
+  }
+}
+
 
 
 .modal {
@@ -217,6 +235,16 @@
     position: relative;
 }
 
+.modal-header-portfolio{
+  background-color: #2C2C4D; 
+  color: white;
+  padding: 20px 20px 0px 20px;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+
 .modal-header h2 {
     align-self: center;
 }
@@ -260,6 +288,14 @@
 .sched-grid-item{
     width: 200px;
     height: 50%;
+}
+
+#portfolio_proto{
+  width: 500px;
+}
+
+#portfolio_proto:hover{
+  opacity: .9;
 }
 
 
