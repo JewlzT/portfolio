@@ -68,7 +68,7 @@ function Projects() {
                       <div className="grid-container-modal">
                         <div className = "grid-item"><p>Team Project</p></div>
                         <div className = "grid-item"><p>2 months</p></div>
-                        <div className = "grid-item"><p>Fall 2024</p></div>
+                        <div className = "grid-item"><p>Fall 2023</p></div>
                       </div>
                       <button onClick={closePopUp} className="close-btn">&times;</button>
                     </div>
@@ -124,7 +124,7 @@ function Projects() {
                       <div className="grid-container-modal">
                         <div className = "grid-item"><p>Team Project</p></div>
                         <div className = "grid-item"><p>3 days</p></div>
-                        <div className = "grid-item"><p>Fall 2024</p></div>
+                        <div className = "grid-item"><p>Fall 2023</p></div>
                       </div>
                       <button onClick={closePopUp} className="close-btn">&times;</button>
                     </div>
@@ -170,7 +170,7 @@ function Projects() {
                       <div className="grid-container-modal">
                         <div className = "grid-item"><p>Team Project</p></div>
                         <div className = "grid-item"><p>1 month</p></div>
-                        <div className = "grid-item"><p>Fall 2024</p></div>
+                        <div className = "grid-item"><p>Fall 2023</p></div>
                       </div>
                       <button onClick={closePopUp} className="close-btn">&times;</button>
                     </div>
@@ -222,7 +222,7 @@ function Projects() {
                       <div className="grid-container-modal">
                         <div className = "grid-item"><p>Personal Project</p></div>
                         <div className = "grid-item"><p>3 months</p></div>
-                        <div className = "grid-item"><p>Summer 2025</p></div>
+                        <div className = "grid-item"><p>Summer 2024</p></div>
                       </div>
                       <button onClick={closePopUp} className="close-btn">&times;</button>
                     </div>
