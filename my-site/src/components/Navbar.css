@@ -1,0 +1,226 @@
+.Navbar {
+    position: relative;
+    width: 100%;
+}
+
+/**************** Mobile ****************/
+
+/* Mobile - Hamburger */
+.hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-menu button {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    padding: 8px;
+    color: #ffffff;
+}
+
+.nav-cloud{
+    padding: 8px;
+}
+
+/* Mobile - Overlay */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mobile-nav-content {
+    background-color: #212137;
+    width: 60%;
+    max-width: 300px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideInFromRight 0.3s ease-in-out;
+    text-align: center;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translate(100%);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+/* Mobile - Inside Overlay */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.mobile-nav-content nav{
+    padding-top: 3.5em;
+}
+
+.mobile-nav-content nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-content nav li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav-content nav a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 20px;
+    display: block;
+    padding: 10px 0;
+}
+
+.mobile-nav-content nav a.mobile-contact,
+.mobile-nav-content nav .mobile-contact a {
+    color: #212137;
+    background: #eee;
+    border-radius: 20px;
+}
+/**************** Tablet ****************/
+.tablet-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 1.2em;
+    margin: 1em 5em 0 5em;
+    background-color: white; 
+    box-shadow: 0 4 10 rgba(0, 0, 0, .5);
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+.tablet-nav-links{
+    display: flex;
+    justify-content: center;
+}
+
+.tablet-nav-links nav ul{
+    list-style: none;
+    display: flex;     
+    flex-direction: row;
+    gap: 1.2em;
+    margin: 0;      
+    padding: 0;
+}
+
+.tablet-nav-links nav a{
+    text-decoration: none;
+    color: #212137;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    position: relative;
+}
+
+.tablet-nav-links nav a:hover{
+    opacity: 1;
+}
+
+/**************** Desktop ****************/
+
+.desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2em 0 1.2em;
+    margin: 1em 5em 0 5em;
+    background-color: white; 
+    box-shadow: 0 4 10 rgba(0, 0, 0, .5);
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+.desktop-nav-links{
+    display: flex;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon img{
+    height: 50px;
+}
+
+.desktop-nav-links nav ul{
+    list-style: none;
+    display: flex;     
+    flex-direction: row;
+    gap: 2em;
+}
+
+.desktop-nav-links nav a{
+    text-decoration: none;
+    color: #212137;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    position: relative;
+    padding: 0.1em;
+}
+
+.desktop-nav-links nav a:hover{
+    opacity: 1;
+}
+
+/* Custom Menu Hover */
+
+.desktop-nav-links nav a::before,
+.desktop-nav-links nav a::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* Left side image */
+.desktop-nav-links nav a::before {
+    left: -10px;
+    top: 50%;
+    transform: translateY(10%);
+    width: 20px;
+    height: 20px;
+    background-image: url('/public/images/portfolio/menu-detail-l.png');
+    background-size: 60%;
+}
+
+/* Right side image */
+.desktop-nav-links nav a::after {
+    right: -25px;
+    top: 50%;
+    transform: translateY(-65%);
+    width: 30px;
+    height: 30px;
+    background-image: url('/public/images/portfolio/menu-detail-r.png');
+    background-size: 60%;
+}
+
+.desktop-nav-links nav a:hover::before,
+.desktop-nav-links nav a:hover::after {
+    opacity: 1;
+}
