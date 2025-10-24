@@ -12,7 +12,7 @@ function Navbar() {
             <MediaQuery maxWidth={BREAKPOINT_VALUES.mobile_max}>
                 <div data-testid="test-mobile-menu" className="hamburger-menu">
                     <div className="nav-cloud">
-                        <img src={`${process.env.PUBLIC_URL}/images/portfolio/cloud-icon.png`} alt="Cloud icon"/>
+                        <img src={`${process.env.PUBLIC_URL}/images/navbar/cloud-icon.png`} alt="Cloud icon"/>
                     </div>
                     <button onClick={() => setIsMobileNav(true)}>☰</button>
                 </div>
@@ -39,7 +39,7 @@ function Navbar() {
                 )}
             </MediaQuery>
             {/* Replace with proper breakpoints when they are decided */}
-            <MediaQuery minWidth={700} maxWidth={884}>
+            <MediaQuery minWidth={BREAKPOINT_VALUES.tablet_min} maxWidth={BREAKPOINT_VALUES.tablet_max}>
                 <div className="tablet-nav">
                     <div className="tablet-nav-links">
                         <nav data-testid="test-tablet-menu">
@@ -54,7 +54,7 @@ function Navbar() {
                     </div>
                 </div>
             </MediaQuery>
-            <MediaQuery minWidth={885}>
+            <MediaQuery minWidth={BREAKPOINT_VALUES.desktop_min}>
                 <div className="desktop-nav">
                     <div className="nav-icon">
                         <img src={`${process.env.PUBLIC_URL}/favicon.png`} alt="Icon on navigation bar"/>

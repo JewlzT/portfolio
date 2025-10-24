@@ -1,5 +1,4 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navbar from '../Navbar';
 import { BREAKPOINT_VALUES } from '../../constants/breakpoints'
@@ -104,13 +103,4 @@ describe('Navbar Component - Desktop', () => {
         expect(list).toBeInTheDocument();
     });
 
-});
-
-// Future test ideas for when you implement more features:
-describe('Navbar Component - Future Features', () => {
-  // Test for conditional navigation based on current page
-  it.todo('highlights current page in navigation');
-  
-  // Test for smooth scrolling behavior
-  it.todo('scrolls smoothly to page sections when anchor links are clicked');
 });

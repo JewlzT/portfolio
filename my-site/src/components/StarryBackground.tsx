@@ -35,7 +35,7 @@ const StarryBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="starry-background">
+    <div data-testid="starry-sky" className="starry-background">
       {stars.map((star) => (
         <div
             key={star.id}

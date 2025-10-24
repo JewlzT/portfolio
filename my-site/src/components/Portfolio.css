@@ -1,12 +1,13 @@
 .Portfolio {
-  text-align: center;
+  text-align: left;
 }
 
+/**************** Mobile/Tablet ****************/
+
 .Portfolio-header {
-  background-color: #282c34;
   padding: 20px;
   color: white;
-  min-height: 50vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,10 +16,51 @@
 }
 
 .Portfolio-header h1 {
-  margin-bottom: 16px;
+  font-size: 26px;
+
 }
+
 
 .Portfolio-header p {
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.9;
+  text-align: left;
+}
+
+.Portfolio-header .portfolio-pic {
+  width: 90%; 
+  flex-shrink: 0; 
+}
+
+/**************** Desktop ****************/
+.desktop-portfolio-header {
+  padding: 20px;
+  color: white;
+  display: flex; /* Add this */
+  align-items: center;
+  gap: 2rem;
+}
+
+.desktop-portfolio-header .portfolio-pic {
+  width: 50%; /* Give explicit width */
+  flex-shrink: 0; /* Prevent it from shrinking */
+}
+
+.portfolio-pic{
+  text-align: center;
+  padding-top: 4em;
+}
+
+
+.portfolio-pic img{
+  width: 80%;
+}
+
+.intro-text p{
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+.typing{
+  display: inline;
 }
