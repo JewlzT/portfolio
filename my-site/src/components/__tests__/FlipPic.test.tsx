@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import FlipPic from '../FlipPic';
 
-describe("Picture Flipping", () => {
+describe("Picture Flipping Test", () => {
     const frontContent = (
         <img src={`${process.env.PUBLIC_URL}/images/intro/intro-pic.png`} alt="Front" />
     );

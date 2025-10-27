@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './DynamicTextIntro.css'
 
 function DynamicTextIntro() {
     
@@ -48,10 +47,10 @@ function DynamicTextIntro() {
     }, [charIndex, isDeleting, currentTextIndex]);
 
     return (
-        <div className="typing">
+        <span className="typing">
             <span data-testid="typing-test"> {currentText}</span>
             <span className="cursor">|</span>
-        </div>
+        </span>
     );
 }
 

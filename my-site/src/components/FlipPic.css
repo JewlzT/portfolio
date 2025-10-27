@@ -36,3 +36,11 @@
 .flip-pic-back {
   transform: rotateY(180deg);
 }
+
+.flip-pic-front img, 
+  .flip-pic-back img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}

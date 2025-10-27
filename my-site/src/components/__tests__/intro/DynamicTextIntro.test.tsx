@@ -1,5 +1,5 @@
 import { render, screen, act } from "@testing-library/react";
-import DynamicTextIntro from "../intro/DynamicTextIntro";
+import DynamicTextIntro from "../../intro/DynamicTextIntro";
 import '@testing-library/jest-dom';
 
 jest.useFakeTimers();

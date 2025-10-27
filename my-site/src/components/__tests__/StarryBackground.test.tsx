@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import StarryBackground from '../StarryBackground';
 import '@testing-library/jest-dom';
 
-describe('StarryBackground', () => {
+describe('Starry Background for App', () => {
 
   it('renders without crashing', () => {
     render(<StarryBackground />);
