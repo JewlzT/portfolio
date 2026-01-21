@@ -2,7 +2,8 @@
     animation: floating 3s ease-in-out infinite; 
     display: inline-block; 
     text-align: center; 
-    margin: 1rem; 
+    margin: 0; 
+    width: 75%;
 }
 
 .project button {
@@ -25,6 +26,23 @@
     text-align: center;
     margin: 0.5rem 0;
     font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .project:hover {
+        transform: translateY(-5px);
+    }
+    
+    .project:hover img {
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3),
+                    0 0 20px rgba(255, 255, 255, 0.2);
+        filter: brightness(1.1);
+    }
+    
+    .project:hover p {
+        color: #fff;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    }
 }
 
 @keyframes floating {
