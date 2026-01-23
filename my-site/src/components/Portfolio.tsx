@@ -2,6 +2,7 @@ import React from 'react';
 import './Portfolio.css';
 import IntroSection from './intro/IntroSection';
 import Projects from './projects/Projects';
+import Experience from './experience/Experience';
 
 
 function Portfolio() {
@@ -28,6 +29,9 @@ function Portfolio() {
       </div>
       <div id="projects">
         <Projects/>
+      </div>
+      <div id="experience">
+        <Experience/>
       </div>
     </div>
   );
