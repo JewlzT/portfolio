@@ -1,0 +1,139 @@
+.about-me-container {
+    display: flex;
+    gap: 2rem;
+    padding: 5rem 15rem;
+    min-height: 400px;
+    max-width: 1200px; /* Add this to match skills-container */
+    margin: 0 auto; /* Add this to center it */
+}
+
+.aboutme-area h2 {
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    color: white;
+}
+
+.about-me-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    min-width: 30%;
+}
+
+.section-button {
+    padding: 1rem 1.5rem;
+    background-color: #4a4a5e;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.section-button:hover {
+    background-color: #5a5a6e;
+    border-color: #6a6a7e;
+}
+
+.section-button.active {
+    background-color: white;
+    color: #4a4a5e;
+    border-color: #E5E5E5;
+}
+
+.about-me-content {
+    flex: 1;
+    /* padding: 2rem; */
+    text-align: center;
+    border-radius: 8px;
+    min-height: 570px; /* Add this to match .skills-content */
+}
+
+.about-me-section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.about-me-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Section 1 - About Me */
+.aboutme-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 10%;
+}
+
+.textbox-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.textbox-overlay img {
+    display: block;
+    width: 100%;
+}
+
+.textbox-overlay p, .textbox-overlay h2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 0;
+    padding: 1rem;
+    color: #191919;
+    text-align: left;
+}
+.textbox-overlay h2  {
+    animation: pulsing 3s ease-in-out infinite;
+}
+.textbox-overlay h2 a:hover  {
+    color: black;
+    text-decoration: underline;
+}
+.textbox-overlay h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes pulsing {
+    0%, 100%{
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+    50%{
+        transform: translate(-50%, -50%) scale(0.97);
+    }
+}
+
+.textbox-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.arrow-button:hover {
+    transform: scale(1.1);
+}

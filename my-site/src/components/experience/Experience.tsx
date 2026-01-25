@@ -1,6 +1,7 @@
 import './Experience.css'
 import experienceData from '../../data/experience.json';
 import { useState, useRef, useEffect } from 'react';
+import FadeInSection from '../animations/FadeInSection';
 
 interface ExperienceItem {
     title: string;
@@ -133,7 +134,10 @@ export default function Experience() {
 
     return (
         <div className="experience-container">
-            <h2>Experience</h2>
+            <FadeInSection delay={0.2}>
+                <h2>Experience</h2>
+            </FadeInSection>
+            <FadeInSection delay={0.4} className='slide-right'>
             <div 
                 className="carousel-wrapper"
                 onTouchStart={handleTouchStart}
@@ -169,6 +173,7 @@ export default function Experience() {
                     </div>
                 )}
             </div>
+            </FadeInSection>
         </div>
     );
 }

@@ -50,7 +50,7 @@ function Projects () {
                     </FadeInSection>
                     <div className="projects-grid desktop-grid">
                         {projectsData.project_data.map((project, index) => (
-                            <FadeInSection key={index} delay={0.4 + (index * 0.2)} className="scale preserve-layout">
+                            <FadeInSection key={index} delay={0.4} className="scale preserve-layout">
                                 <Project 
                                     project_name={project.name}
                                     image_link={`${process.env.PUBLIC_URL}${project.image}`}
@@ -70,7 +70,7 @@ function Projects () {
                         
                         {/* Center image - keep this outside the grid */}
                         <div className="center-image">
-                            <FadeInSection delay={1.0} className="scale preserve-layout">
+                            <FadeInSection delay={0.5} className="scale preserve-layout">
                                 <div className="center-image-tooltip">
                                     <img 
                                         src={`${process.env.PUBLIC_URL}/images/projects/julie-starfloat.gif`} 

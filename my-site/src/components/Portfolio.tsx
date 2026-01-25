@@ -3,6 +3,7 @@ import './Portfolio.css';
 import IntroSection from './intro/IntroSection';
 import Projects from './projects/Projects';
 import Experience from './experience/Experience';
+import AboutMe from './about/AboutMe';
 
 
 function Portfolio() {
@@ -32,6 +33,9 @@ function Portfolio() {
       </div>
       <div id="experience">
         <Experience/>
+      </div>
+      <div id="aboutme">
+        <AboutMe/>
       </div>
     </div>
   );
