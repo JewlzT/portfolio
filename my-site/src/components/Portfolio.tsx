@@ -3,7 +3,7 @@ import './Portfolio.css';
 import IntroSection from './intro/IntroSection';
 import Projects from './projects/Projects';
 import Experience from './experience/Experience';
-import AboutMe from './about/AboutMe';
+import AboutMe from './about/About';
 
 
 function Portfolio() {
@@ -34,7 +34,7 @@ function Portfolio() {
       <div id="experience">
         <Experience/>
       </div>
-      <div id="aboutme">
+      <div id="about">
         <AboutMe/>
       </div>
     </div>
