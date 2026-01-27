@@ -1,0 +1,94 @@
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    border: white 2px solid;
+    border-radius: 10px;
+    margin: 200px auto 100px auto;
+    background-color: rgba(255, 255, 255, 0.085);
+    color: white;
+    position: relative;
+    
+}
+
+.form-container h1, .form-container p{
+    text-align: center;
+}
+
+.form-container button {
+    background-color: rgba(225, 225, 225, 0.175);
+    color: #ffffff;
+    font-weight: bold;
+    border: rgb(214, 214, 214) 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem 4rem;
+    position: relative;
+}
+
+.form-container button:hover {
+    background-color: rgb(255, 255, 255);
+    color: #2a2a44
+}
+
+.form-container button::before {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -30px;
+    bottom: -12px;  
+    width: 40px;
+    height: 40px;
+    background-image: url('../../public/images/about/large-diamond.png');
+    background-repeat: no-repeat;
+}
+
+.form-container button::after {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -2px;
+    bottom: -16px;  
+    width: 30px;
+    height: 30px;
+    background-image: url('../../public/images/about/small-diamond.png');
+    background-repeat: no-repeat;
+    animation-delay: 0.2s;
+}
+
+
+.form-container button:hover::before, .form-container button:hover::after{
+    animation: diamond-twinkle 1s ease-in-out infinite;
+}
+.form-container button:hover::after{
+    animation-delay: 0.2s;
+}
+
+.form-pixel-character{
+    position: absolute;
+    top: -175px;
+}
+
+@media (max-width: 400px){
+    .form-container {
+        padding: 2rem 3rem 3rem 3rem;
+    }
+    /* .form-pixel-character{
+        position: absolute;
+        top: -25.2%;
+        left: -10%;
+    } */
+}
+
+@media (max-width: 350px){
+    .form-container {
+        padding: 0.5rem 3rem 3rem 3rem;
+    }
+    
+}
