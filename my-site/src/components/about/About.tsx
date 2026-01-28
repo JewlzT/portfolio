@@ -1,27 +1,33 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import FadeInSection from '../animations/FadeInSection';
 import './About.css'
-import {useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 import aboutme_data from "../../data/aboutme.json"
 import { BREAKPOINT_VALUES } from '../../constants/breakpoints';
 import { Link } from 'react-router-dom';
 import Skills from './Skills';
 
-function AboutMe () {
-    const [selectedSection, setSelectedSection] = useState('About Me');
-    const [aboutMeIndex, setAboutMeIndex] = useState(0);
-    const [selectedHobby, setSelectedHobby] = useState(null);
-    const [randomHobby, setRandomHobby] = useState(null);
+interface Hobby {
+    name: string;
+    logo: string;
+    description: string;
+}
+
+function AboutMe() {
+    const [selectedSection, setSelectedSection] = useState<string>('About Me');
+    const [aboutMeIndex, setAboutMeIndex] = useState<number>(0);
+    const [selectedHobby, setSelectedHobby] = useState<Hobby | null>(null);
+    const [randomHobby, setRandomHobby] = useState<Hobby | null>(null);
     const about_me_options = aboutme_data.aboutme_data;
     const isMobileOrTablet = useMediaQuery({ maxWidth: BREAKPOINT_VALUES.desktop_min - 1 });
 
-    const aboutMeContent = [
+    const aboutMeContent: string[] = [
         "Hi, I am Julianne! I'm a recent graduate from the University of Central Florida with a bachelor's degree in computer science and a minor in digital media.",
         "I am an aspiring software engineer with most of my experience in front-end development, but I enjoy working and honing my skills in full-stack development.",
         "Let's get to know each other!"
     ];
 
-    const hobbiesContent = useMemo(() => [
+    const hobbiesContent = useMemo<Hobby[]>(() => [
         {
             name: "book",
             logo: `${process.env.PUBLIC_URL}/images/about/hobbies/book.png`,
@@ -62,11 +68,11 @@ function AboutMe () {
         }
     }, [isMobileOrTablet, hobbiesContent]);
 
-    const handleNextContent = () => {
+    const handleNextContent = (): void => {
         setAboutMeIndex((prev) => (prev + 1) % aboutMeContent.length);
     };
 
-    const handleHobbyClick = (hobby) => {
+    const handleHobbyClick = (hobby: Hobby): void => {
         setSelectedHobby(selectedHobby?.name === hobby.name ? null : hobby);
     };
 
@@ -135,7 +141,7 @@ function AboutMe () {
                 <div className="about-me-container">
                     
                     <div className="about-me-sidebar fade-in-mount">
-                        {about_me_options.map((section) => (
+                        {about_me_options.map((section: string) => (
                             <button
                                 key={section}
                                 className={`section-button ${selectedSection === section ? 'active' : ''}`}
@@ -194,7 +200,7 @@ function AboutMe () {
                                                         '--item-count': hobbiesContent.length,
                                                         '--item-index': index,
                                                         '--radius': '200px'
-                                                    }}
+                                                    } as React.CSSProperties}
                                                 >
                                                     <div 
                                                         className={`hobby-logo-container ${selectedHobby?.name === hobby.name ? 'active' : ''}`}
@@ -203,9 +209,12 @@ function AboutMe () {
                                                         <img 
                                                             src={hobby.logo} 
                                                             alt={hobby.name}
-                                                            onError={(e) => {
-                                                                e.target.style.display = 'none';
-                                                                e.target.parentElement.innerHTML = `<div class="hobby-placeholder">${hobby.name[0]}</div>`;
+                                                            onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.style.display = 'none';
+                                                                if (target.parentElement) {
+                                                                    target.parentElement.innerHTML = `<div class="hobby-placeholder">${hobby.name[0]}</div>`;
+                                                                }
                                                             }}
                                                         />
                                                     </div>

@@ -4,18 +4,30 @@ import './Skills.css';
 import { useMediaQuery } from 'react-responsive';
 import { BREAKPOINT_VALUES } from '../../constants/breakpoints';
 
+interface Skill {
+    name: string;
+    logo: string;
+    description?: string;
+}
+
+interface SkillCategory {
+    name: string;
+    icon: string;
+    skills: Skill[];
+}
+
 function Skills() {
-    const [selectedCategory, setSelectedCategory] = useState('Frontend');
-    const [selectedSkill, setSelectedSkill] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState<string>('Frontend');
+    const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
     const isMobile = useMediaQuery({ maxWidth: BREAKPOINT_VALUES.tablet_min - 1 });
     const isVerySmallMobile = useMediaQuery({ maxWidth: 400 });
     
-    const touchStartX = useRef(0);
-    const touchEndX = useRef(0);
-    const isDragging = useRef(false);
+    const touchStartX = useRef<number>(0);
+    const touchEndX = useRef<number>(0);
+    const isDragging = useRef<boolean>(false);
 
     // Define skill categories with their icons
-    const skillCategories = [
+    const skillCategories: SkillCategory[] = [
         { 
             name: 'Frontend', 
             icon: `${process.env.PUBLIC_URL}/images/about/skills/options/frontend.png`,
@@ -123,40 +135,40 @@ function Skills() {
         },
     ];
 
-    const getCurrentCategory = () => {
+    const getCurrentCategory = (): SkillCategory | undefined => {
         return skillCategories.find(cat => cat.name === selectedCategory);
     };
-    const getCurrentCategoryIndex = () => {
+    const getCurrentCategoryIndex = (): number => {
         return skillCategories.findIndex(cat => cat.name === selectedCategory);
     };
 
-    const handleSkillClick = (skill) => {
+    const handleSkillClick = (skill: Skill): void => {
         setSelectedSkill(selectedSkill?.name === skill.name ? null : skill);
     };
 
-    const handlePrevCategory = () => {
+    const handlePrevCategory = (): void => {
         const currentIndex = getCurrentCategoryIndex();
         const prevIndex = currentIndex === 0 ? skillCategories.length - 1 : currentIndex - 1;
         setSelectedCategory(skillCategories[prevIndex].name);
         setSelectedSkill(null);
     };
 
-    const handleNextCategory = () => {
+    const handleNextCategory = (): void => {
         const currentIndex = getCurrentCategoryIndex();
         const nextIndex = currentIndex === skillCategories.length - 1 ? 0 : currentIndex + 1;
         setSelectedCategory(skillCategories[nextIndex].name);
         setSelectedSkill(null);
     };
 
-    const handleTouchStart = (e) => {
+    const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>): void => {
         touchStartX.current = e.touches[0].clientX;
     };
 
-    const handleTouchMove = (e) => {
+    const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>): void => {
         touchEndX.current = e.touches[0].clientX;
     };
 
-    const handleTouchEnd = () => {
+    const handleTouchEnd = (): void => {
         if (!touchStartX.current || !touchEndX.current) return;
         
         const distance = touchStartX.current - touchEndX.current;
@@ -174,18 +186,18 @@ function Skills() {
         touchEndX.current = 0;
     };
 
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>): void => {
         e.preventDefault();
         isDragging.current = true;
         touchStartX.current = e.clientX;
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
         if (!isDragging.current) return;
         touchEndX.current = e.clientX;
     };
 
-    const handleMouseUp = () => {
+    const handleMouseUp = (): void => {
         if (!isDragging.current) return;
         isDragging.current = false;
 
@@ -206,7 +218,7 @@ function Skills() {
         touchEndX.current = 0;
     };
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = (): void => {
         isDragging.current = false;
         touchStartX.current = 0;
         touchEndX.current = 0;
@@ -305,10 +317,10 @@ function Skills() {
                                             key={skill.name}
                                             className={`skill-item position-${index}`}
                                             style={{
-                                                '--item-count': getCurrentCategory().skills.length,
+                                                '--item-count': getCurrentCategory()?.skills.length,
                                                 '--item-index': index,
                                                 '--radius': getCurrentCategoryIndex() >= 3 ? '150px' : '130px'
-                                            }}
+                                            } as React.CSSProperties}
                                         >
                                             <div className={`skill-logo-container ${selectedSkill?.name === skill.name ? 'active' : ''}`}
                                                 onClick={() => handleSkillClick(skill)}
@@ -317,8 +329,11 @@ function Skills() {
                                                     src={skill.logo} 
                                                     alt={skill.name}
                                                     onError={(e) => {
-                                                        e.target.style.display = 'none';
-                                                        e.target.parentElement.innerHTML = `<div class="skill-placeholder">${skill.name[0]}</div>`;
+                                                        const target = e.target as HTMLImageElement;
+                                                        target.style.display = 'none';
+                                                        if (target.parentElement) {
+                                                            target.parentElement.innerHTML = `<div class="skill-placeholder">${skill.name[0]}</div>`;
+                                                        }
                                                     }}
                                                 />
                                             </div>
