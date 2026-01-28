@@ -1,0 +1,69 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+.Portfolio {
+  text-align: left;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Above the galaxy background */
+  min-height: 100vh;
+
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .Portfolio {
+    animation: none;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  }
+}
+
+/* Make sure content is visible over the dark background */
+.Portfolio > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Add some padding around children */
+.Portfolio > *:not(:first-child) {
+  padding: 2rem 0;
+}
+
+#intro {
+  padding: 7em 0;
+}
+
+@media (max-width: 883px){
+  #intro {
+    padding: 5em 0 0 0;
+  }
+  #experience {
+    padding: 5em 0 0 0;
+  }
+  #about {
+    padding: 5em 0 0 0;
+  }
+}
+
+@media (min-width: 884px){
+  #experience {
+    padding: 5em 0 0 0;
+  }
+  #about {
+    padding: 5em 0 0 0;
+  }
+}
+

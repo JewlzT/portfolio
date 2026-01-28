@@ -1,0 +1,265 @@
+.experience-container {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.experience-container h2 {
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    color: white;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.experience-card {
+    position: absolute;
+    background: none;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.6s ease;
+    max-width: 300px;
+    width: 90%;
+    
+}
+
+.experience-card p, .experience-card h3 {
+    color: white;
+    
+}
+
+.experience-card a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.experience-card img {
+    width: 100%;
+    margin-bottom: 1rem; 
+    transition: transform 0.6s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.experience-card.active img {
+    animation: floating 3s ease-in-out infinite;
+}
+
+.experience-card h3,
+.experience-card p {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.experience-card h3 {
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.experience-card p {
+    font-weight: 400;
+}
+
+.experience-card.active {
+    transform: translateX(0) scale(1);
+    z-index: 2;
+    opacity: 1;
+}
+
+.experience-card.next {
+    transform: translateX(200px) scale(0.7);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.experience-card.prev {
+    transform: translateX(-200px) scale(0.7);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* Sliding animations */
+.experience-card.sliding-to-left {
+    animation: slideToLeft 0.6s ease forwards;
+}
+
+.experience-card.sliding-to-right {
+    animation: slideToRight 0.6s ease forwards;
+}
+
+.experience-card.sliding-to-center {
+    animation: slideToCenter 0.6s ease forwards;
+}
+
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+    100% {
+        transform: translateX(-200px) scale(0.7);
+        opacity: 0.5;
+        z-index: 1;
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+    100% {
+        transform: translateX(200px) scale(0.7);
+        opacity: 0.5;
+        z-index: 1;
+    }
+}
+
+@keyframes slideToCenter {
+    0% {
+        transform: translateX(200px) scale(0.7);
+        opacity: 0.5;
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+.experience-card.prev.sliding-to-center {
+    animation: slideToCenterFromLeft 0.6s ease forwards;
+}
+
+@keyframes slideToCenterFromLeft {
+    0% {
+        transform: translateX(-200px) scale(0.7);
+        opacity: 0.5;
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -20px;
+    }
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+
+    .carousel-wrapper {
+        min-height: 500px;
+    }
+
+    .experience-card {
+        max-width: 400px;
+        padding: 2rem;
+    }
+
+    .experience-card.next {
+        transform: translateX(500px) scale(0.8);
+        opacity: 0.6;
+    }
+
+    .experience-card.prev {
+        transform: translateX(-500px) scale(0.8);
+        opacity: 0.6;
+    }
+
+    @keyframes slideToLeft {
+        0% {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+        100% {
+            transform: translateX(-500px) scale(0.8);
+            opacity: 0.6;
+            z-index: 1;
+        }
+    }
+
+    @keyframes slideToRight {
+        0% {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+        100% {
+            transform: translateX(500px) scale(0.8);
+            opacity: 0.6;
+            z-index: 1;
+        }
+    }
+
+    @keyframes slideToCenter {
+        0% {
+            transform: translateX(500px) scale(0.8);
+            opacity: 0.6;
+            z-index: 1;
+        }
+        100% {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+
+    @keyframes slideToCenterFromLeft {
+        0% {
+            transform: translateX(-500px) scale(0.8);
+            opacity: 0.6;
+            z-index: 1;
+        }
+        100% {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+
+    .experience-card:hover img {
+        transform: scale(1.05);
+    }
+    
+    
+    .experience-card:hover h3,
+    .experience-card:hover p {
+        color: #fff;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    }
+
+}
+
+
+.experience-card.prev,
+.experience-card.next {
+    cursor: pointer;
+}
+
+.experience-card.prev:hover,
+.experience-card.next:hover {
+    opacity: 0.8;
+}
+

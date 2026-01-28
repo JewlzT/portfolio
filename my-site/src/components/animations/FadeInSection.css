@@ -1,0 +1,131 @@
+/* 
+Animation Classes:
+slide-left - Slides in from left
+slide-right - Slides in from right
+slide-up - Slides in from top
+slide-down - Slides in from bottom
+slide-top-left - Slides in from top-left diagonal
+slide-top-right - Slides in from top-right diagonal
+slide-bottom-left - Slides in from bottom-left diagonal
+slide-bottom-right - Slides in from bottom-right diagonal
+scale - Scales up from smaller size
+scale-up - Scales down from larger size
+rotate - Rotates in from -10 degrees
+slide-rotate - Combines slide-left with rotation
+*/
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--animation-duration, 0.8s) ease-out var(--animation-delay, 0s),
+              transform var(--animation-duration, 0.8s) ease-out var(--animation-delay, 0s);
+
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternative animation styles */
+.fade-in-section.slide-left {
+  transform: translateX(-80px);
+}
+
+.fade-in-section.slide-left.is-visible {
+  transform: translateX(0);
+}
+
+.fade-in-section.slide-right {
+  transform: translateX(80px);
+}
+
+.fade-in-section.slide-right.is-visible {
+  transform: translateX(0);
+}
+
+/* Slide from top */
+.fade-in-section.slide-up {
+  transform: translateY(-50px);
+}
+
+.fade-in-section.slide-up.is-visible {
+  transform: translateY(0);
+}
+
+/* Slide from bottom (default is already from bottom) */
+.fade-in-section.slide-down {
+  transform: translateY(50px);
+}
+
+.fade-in-section.slide-down.is-visible {
+  transform: translateY(0);
+}
+
+/* Diagonal animations */
+.fade-in-section.slide-top-left {
+  transform: translate(-50px, -50px);
+}
+
+.fade-in-section.slide-top-left.is-visible {
+  transform: translate(0, 0);
+}
+
+.fade-in-section.slide-top-right {
+  transform: translate(50px, -50px);
+}
+
+.fade-in-section.slide-top-right.is-visible {
+  transform: translate(0, 0);
+}
+
+.fade-in-section.slide-bottom-left {
+  transform: translate(-50px, 50px);
+}
+
+.fade-in-section.slide-bottom-left.is-visible {
+  transform: translate(0, 0);
+}
+
+.fade-in-section.slide-bottom-right {
+  transform: translate(50px, 50px);
+}
+
+.fade-in-section.slide-bottom-right.is-visible {
+  transform: translate(0, 0);
+}
+
+/* Scale animations */
+.fade-in-section.scale {
+  transform: scale(0.8);
+}
+
+.fade-in-section.scale.is-visible {
+  transform: scale(1);
+}
+
+.fade-in-section.scale-up {
+  transform: scale(1.1);
+}
+
+.fade-in-section.scale-up.is-visible {
+  transform: scale(1);
+}
+
+/* Rotation animations */
+.fade-in-section.rotate {
+  transform: rotate(-10deg);
+}
+
+.fade-in-section.rotate.is-visible {
+  transform: rotate(0deg);
+}
+
+/* Combined animations */
+.fade-in-section.slide-rotate {
+  transform: translateX(-50px) rotate(-5deg);
+}
+
+.fade-in-section.slide-rotate.is-visible {
+  transform: translateX(0) rotate(0deg);
+}

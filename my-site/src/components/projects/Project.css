@@ -1,0 +1,58 @@
+.project {
+    animation: floating 3s ease-in-out infinite; 
+    display: inline-block; 
+    text-align: center; 
+    margin: 0; 
+    width: 75%;
+}
+
+.project button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block; /* Make button full width */
+    width: 100%;
+}
+
+.project img {
+    width: 100%;
+    height: 175px; /* Set fixed height */
+    object-fit: cover;
+    border-radius: 20px; /* Match parent radius */
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+}
+
+.project p {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .project:hover {
+        transform: translateY(-5px);
+    }
+    
+    .project:hover img {
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3),
+                    0 0 20px rgba(255, 255, 255, 0.2);
+        filter: brightness(1.1);
+    }
+    
+    .project:hover p {
+        color: #fff;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

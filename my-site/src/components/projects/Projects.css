@@ -1,0 +1,65 @@
+.desktop-projects-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: clamp(5em, 10em, 20em);
+    row-gap: 4rem;
+    max-width: 100%;
+    margin: 0 2em 0 2em;
+}
+
+@media (max-width: 699px) {
+    .mobile-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1rem;
+    }
+}
+
+
+/* Center image styling */
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.center-image img {
+    width: 80%;
+    height: auto;
+    max-width: 200px;
+}
+
+.center-image-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Add glow effect when project is hovered */
+.desktop-projects-container:has(.project:hover) .center-image img {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+/* Container styling */
+.mobile-projects-container,
+.desktop-projects-container {
+    text-align: center;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.mobile-projects-container h2,
+.desktop-projects-container h2 {
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}

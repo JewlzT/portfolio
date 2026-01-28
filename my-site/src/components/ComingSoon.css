@@ -1,0 +1,51 @@
+
+
+.coming-soon-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.coming-soon-container h1{
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    font-size: clamp(36px, 10vw, 48px);
+}
+
+.coming-soon-star {
+    position: relative;
+    display: inline-block;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.coming-soon-pixel {
+    position: absolute;
+    top: 34%;
+    left: 28%;
+    transform: translate(-50%, -50%) rotate(-22deg);
+}
+
+@keyframes floating {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -30px;
+    }
+}
+
+@media (max-width: 884px){
+    .coming-soon-star img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .coming-soon-pixel {
+        width: 35%; /* Scale proportionally to parent */
+    }
+
+    .coming-soon-pixel img {
+        max-width: 100%;
+        height: auto;
+    }
+}

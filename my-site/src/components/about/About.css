@@ -1,0 +1,473 @@
+/* Outer Containers and Sections */
+.about-me-container {
+    display: flex;
+    gap: 3rem;
+    padding: 5rem clamp(1rem, 5vw, 15rem);
+    min-height: 400px;
+    max-width: 1200px; /* Add this to match skills-container */
+    margin: 0 auto; /* Add this to center it */
+    height: 100%;
+}
+
+.aboutme-area h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    color: white;
+}
+
+.aboutme-area .about-subtitle {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    text-align: center;
+    color: white;
+}
+
+.about-me-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    min-width: 30%;
+}
+
+.section-button {
+    position: relative;
+    padding: 1rem 1.5rem;
+    background-color: #363659;
+    color: white;
+    border: white 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.section-button:hover {
+    background-color: #5a5a6e;
+    border-color: #6a6a7e;
+}
+
+.section-button.active {
+    background-color: white;
+    color: #363659;
+    font-weight: bold;
+    border-color: #E5E5E5;
+}
+
+.section-button.active::before {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -38px;
+    top: 13px;  
+    width: 50px;
+    height: 50px;
+    background-image: url('../../../public/images/about/large-diamond.png');
+    background-repeat: no-repeat;
+    animation: diamond-twinkle 1s ease-in-out infinite;
+}
+.section-button.active::after {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -4px;
+    top: 36px;  
+    width: 30px;
+    height: 30px;
+    background-image: url('../../../public/images/about/small-diamond.png');
+    background-repeat: no-repeat;
+    animation: diamond-twinkle 1s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+.fade-in-mount {
+    animation: fadeInMount 1.0s ease-in-out;
+}
+
+@keyframes fadeInMount {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-me-content {
+    flex: 1;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 576px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.about-me-content > * {
+    width: 100%;
+    height: 100%;
+}
+
+.about-me-section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.about-me-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Section 1 - About Me */
+.aboutme-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 50px;
+}
+
+.textbox-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.textbox-overlay img {
+    display: block;
+    width: clamp(70%, 85vw, 100%);
+    height: auto;
+    min-height: clamp(150px, 30vh, 100px);
+    object-fit: fill;
+    margin: 0 auto;
+}
+
+.textbox-overlay p{
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+.textbox-overlay p, .textbox-overlay h3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 0;
+    padding: 1rem;
+    color: #191919;
+    text-align: left;
+}
+.textbox-overlay h3  {
+    font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+    animation: pulsing 3s ease-in-out infinite;
+}
+.textbox-overlay h3 a:hover  {
+    color: black;
+    text-decoration: underline;
+}
+.textbox-overlay h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes pulsing {
+    0%, 100%{
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+    50%{
+        transform: translate(-50%, -50%) scale(0.97);
+    }
+}
+
+
+
+.textbox-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.arrow-button:hover {
+    transform: scale(1.1);
+}
+
+/* Hobbies Section Styles - Similar to Skills */
+.hobbies-section {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.hobbies-section .textbox-container {
+    margin-top: -20px; /* Add negative margin to move it up */
+}
+
+.hobbies-display {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.hobbies-circle-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: -60px; /* Move the whole circle container up relative to textbox */
+}
+
+.pixel-character-hobbies {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hobby-item {
+    position: absolute;
+    top: 5%;
+    right: clamp(30%, 45%, 50%);
+    width: clamp(50px, 4vw, 80px);
+    height: clamp(50px, 4vw, 80px);
+    margin: 0;
+    --x-offset: calc(var(--item-index) * clamp(60px, 10vw, 120px));
+    transform: 
+        translateX(calc(var(--x-offset) - (var(--item-count) - 1) * clamp(30px, 5vw, 60px)));
+    transition: transform 0.3s ease;
+    z-index: 3;
+    animation-delay: calc(var(--item-index) * 0.3s);
+}
+
+@keyframes floatingHobby {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -20px;
+    }
+}
+
+@keyframes floatingHobby2 {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -25px;
+    }
+}
+
+.hobby-logo-container {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hobby-logo-container:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hobby-logo-container.active {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border: 2px solid #6366f1;
+}
+
+.hobby-logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hobby-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.hobby-item:hover .hobby-logo-container {
+    transform: scale(1.15);
+    border: 2px solid #6366f1;
+}
+
+/* Add individual variations */
+.hobby-item:nth-child(1) { 
+    top: 40%;
+    animation: floatingHobby2 6s ease-in-out infinite;
+    animation-delay:  0.1s;
+}
+.hobby-item:nth-child(2) { 
+    top: 20%; 
+    animation: floatingHobby2 3s ease-in-out infinite;
+    animation-delay:  0.3s;
+
+}
+.hobby-item:nth-child(3) { 
+    top: -0%; 
+    animation: floatingHobby2 4s ease-in-out infinite;
+    animation-delay:  0.1s;
+}
+.hobby-item:nth-child(4) { 
+    top: -2%; 
+    animation: floatingHobby2 3s ease-in-out infinite;
+ 
+}
+.hobby-item:nth-child(5) { 
+    top: 20%; 
+    animation: floatingHobby2 5s ease-in-out infinite;
+    animation-delay:  0.5s;
+}
+.hobby-item:nth-child(6) { 
+    top: 40%; 
+    animation: floatingHobby2 4s ease-in-out infinite;
+    animation-delay:  0.2s;
+}
+
+/* Responsive design for hobbies */
+@media (max-width: 768px) {
+    .hobbies-circle-container {
+        max-width: 350px;
+        height: 350px;
+    }
+
+    .hobby-item {
+        --radius: 130px;
+        width: 60px;
+        height: 60px;
+        margin: -30px 0 0 -30px;
+    }
+    
+}
+
+@media (max-width: 884px){
+    .hobbies-section {
+        width: 100%;
+        padding: 230px 0 0 0 ;
+        position: relative;
+    }
+
+    .pixel-character-hobbies {
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        pointer-events: none;
+    }
+}
+
+/* Section 4 - Current Challenge */
+
+.challenge-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0rem, 3vw, 2rem);
+    width: 100%;
+    max-width: 100%;
+    height: 90%;
+    /* padding: 20px; */
+    padding-top: 150px;
+    overflow-x: hidden;
+}
+
+.challenge-textbox {
+    background: rgba(255, 255, 255, 0.115);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(229, 229, 229, 0.15);
+    border: white 2px solid;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.challenge-textbox h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    text-align: center;
+}
+
+.challenge-textbox img {
+    position: absolute;
+    top: -30%;
+    right: -1.5%;
+    animation: diamond-twinkle 2s ease-in-out infinite;
+}
+
+@keyframes diamond-twinkle {
+    0%, 100% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 60%;
+    }
+}
+@media (max-width: 400px) {
+    .challenge-section img {
+        max-width: clamp(50%, 50vw, 60%);
+    }
+}
+
+@media (max-width: 884px) {
+    .challenge-section {
+        padding: 0;
+    }
+    .challenge-textbox {
+        background: rgba(255, 255, 255, 0.115);
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(229, 229, 229, 0.15);
+        border: white 2px solid;
+        max-width: clamp(200px, 3vw, 300px);
+        width: 100%;
+        position: relative;
+    }  
+    
+}
+
+.content-section {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.content-section.active {
+    display: block;
+}
+
