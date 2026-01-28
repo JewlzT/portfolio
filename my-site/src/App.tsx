@@ -5,6 +5,7 @@ import Portfolio from './components/Portfolio'
 import StarryBackground from './components/StarryBackground'
 import Navbar from './components/Navbar';
 import Galaxy3DBackground from './components/backgrounds/Galaxy3DBackground';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
         </div>
     </Router> 

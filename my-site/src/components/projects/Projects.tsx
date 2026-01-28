@@ -15,6 +15,7 @@ interface ProjectData {
     type: string;
     teamType: string;
     dateRange?: string;
+    pageLink: string;
 }
 
 function Projects () {
@@ -36,6 +37,7 @@ function Projects () {
                                     image_link={`${process.env.PUBLIC_URL}${project.image}`}
                                     alt_text={project.alt}
                                     animation_duration={project.duration}
+                                    pageLink={project.pageLink}
                                 />
                             </FadeInSection>
                         ))}
@@ -56,6 +58,7 @@ function Projects () {
                                     image_link={`${process.env.PUBLIC_URL}${project.image}`}
                                     alt_text={project.alt}
                                     animation_duration={project.duration}
+                                    pageLink={project.pageLink}
                                     onImageHover={() => {
                                         setHoveredProject(project);
                                         setHoveredIndex(index);

@@ -2,11 +2,13 @@ import './Experience.css'
 import experienceData from '../../data/experience.json';
 import { useState, useRef, useEffect } from 'react';
 import FadeInSection from '../animations/FadeInSection';
+import { Link } from 'react-router-dom';
 
 interface ExperienceItem {
     title: string;
     image: string;
     duration: string;
+    pageLink: string;
 }
 
 export default function Experience() {
@@ -151,25 +153,27 @@ export default function Experience() {
                 {/* Previous Experience - Left (if exists) */}
                 {hasPrev && (
                     <div key={`prev-${getPrevIndex()}`} className={getCardClass('prev')} onClick={handlePrev}>
-                        <img src={`${process.env.PUBLIC_URL}${experiences[getPrevIndex()].image}`} alt={experiences[getPrevIndex()].title} />
-                        <h3>{experiences[getPrevIndex()].title}</h3>
-                        <p>{experiences[getPrevIndex()].duration}</p>
+                            <img src={`${process.env.PUBLIC_URL}${experiences[getPrevIndex()].image}`} alt={experiences[getPrevIndex()].title} />
+                            <h3>{experiences[getPrevIndex()].title}</h3>
+                            <p>{experiences[getPrevIndex()].duration}</p>
                     </div>
                 )}
 
-                {/* Active Experience - Center */}
+                {/* Active Experience */}
                 <div key={`active-${activeIndex}`} className={getCardClass('active')}>
-                    <img src={`${process.env.PUBLIC_URL}${experiences[activeIndex].image}`} alt={experiences[activeIndex].title} />
-                    <h3>{experiences[activeIndex].title}</h3>
-                    <p>{experiences[activeIndex].duration}</p>
+                    <Link to={experiences[activeIndex].pageLink}>
+                        <img src={`${process.env.PUBLIC_URL}${experiences[activeIndex].image}`} alt={experiences[activeIndex].title} />
+                        <h3>{experiences[activeIndex].title}</h3>
+                        <p>{experiences[activeIndex].duration}</p>
+                    </Link>
                 </div>
 
-                {/* Next Experience - Right (if exists) */}
+                {/* Next Experience */}
                 {hasNext && (
                     <div key={`next-${getNextIndex()}`} className={getCardClass('next')} onClick={handleNext}>
-                        <img src={`${process.env.PUBLIC_URL}${experiences[getNextIndex()].image}`} alt={experiences[getNextIndex()].title} />
-                        <h3>{experiences[getNextIndex()].title}</h3>
-                        <p>{experiences[getNextIndex()].duration}</p>
+                            <img src={`${process.env.PUBLIC_URL}${experiences[getNextIndex()].image}`} alt={experiences[getNextIndex()].title} />
+                            <h3>{experiences[getNextIndex()].title}</h3>
+                            <p>{experiences[getNextIndex()].duration}</p>
                     </div>
                 )}
             </div>

@@ -7,7 +7,8 @@
             "duration": 7,
             "type": "Web Application",
             "teamType": "Open Source",
-            "dateRange": "Sep 2025 - Present"
+            "dateRange": "Sep 2025 - Present",
+            "pageLink": "/coming-soon"
         },
         {
             "name": "Personal Portfolio",
@@ -16,7 +17,8 @@
             "duration": 5,
             "type": "React SPA",
             "teamType": "Individual",
-            "dateRange": "Sep 2025 - Nov 2025"
+            "dateRange": "Sep 2025 - Nov 2025",
+            "pageLink": "/coming-soon"
         },
         {
             "name": "Talk With Tito",
@@ -25,7 +27,8 @@
             "duration": 3,
             "type": "Web Application",
             "teamType": "Team",
-            "dateRange": "Aug 2024 - May 2025"
+            "dateRange": "Aug 2024 - May 2025",
+            "pageLink": "/coming-soon"
         },
         {
             "name": "De-Mystifier", 
@@ -34,7 +37,8 @@
             "duration": 8,
             "type": "Web Application",
             "teamType": "Individual",
-            "dateRange": "Sep 2023"
+            "dateRange": "Sep 2023",
+            "pageLink": "/coming-soon"
         }
     ]
 }

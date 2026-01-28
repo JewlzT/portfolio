@@ -1,11 +1,25 @@
 import React, {useState} from 'react';
 import './Navbar.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MediaQuery } from 'react-responsive';
 import { BREAKPOINT_VALUES } from '../constants/breakpoints';
 
 function Navbar() {
     const[isMobileNav, setIsMobileNav] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+        if (location.pathname === '/contact' || location.pathname === '/coming-soon') {
+            e.preventDefault();
+            navigate('/portfolio');
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                element?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+        setIsMobileNav(false);
+    };
 
     return (
         <div className="Navbar">
@@ -28,9 +42,9 @@ function Navbar() {
                                 <nav>
                                     <ul>
                                         <li><Link to="/portfolio" onClick={() => setIsMobileNav(false)}>Home</Link></li>
-                                        <li><a href="#projects" onClick={() => setIsMobileNav(false)}>Projects</a></li>
-                                        <li><a href="#experience" onClick={() => setIsMobileNav(false)}>Experience</a></li>
-                                        <li><a href="#about" onClick={() => setIsMobileNav(false)}>About</a></li>
+                                        <li><a href="#projects" onClick={(e) => handleSectionClick(e, 'projects')}>Projects</a></li>
+                                        <li><a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a></li>
+                                        <li><a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a></li>
                                         <li className="mobile-contact"><Link to="/contact" onClick={() => setIsMobileNav(false)}>Contact</Link></li>
                                     </ul>
                                 </nav>
@@ -45,9 +59,9 @@ function Navbar() {
                         <nav data-testid="test-tablet-menu">
                             <ul>
                                 <li><Link to="/portfolio">Home</Link></li>
-                                <li><a href="#projects">Projects</a></li>
-                                <li><a href="#experience">Experience</a></li>
-                                <li><a href="#about">About</a></li>
+                                <li><a href="#projects" onClick={(e) => handleSectionClick(e, 'projects')}>Projects</a></li>
+                                <li><a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a></li>
+                                <li><a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a></li>
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </nav>
@@ -63,9 +77,9 @@ function Navbar() {
                         <nav data-testid="test-desktop-menu">
                             <ul>
                                 <li><Link to="/portfolio">Home</Link></li>
-                                <li><a href="#projects">Projects</a></li>
-                                <li><a href="#experience">Experience</a></li>
-                                <li><a href="#about">About</a></li>
+                                <li><a href="#projects" onClick={(e) => handleSectionClick(e, 'projects')}>Projects</a></li>
+                                <li><a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a></li>
+                                <li><a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a></li>
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </nav>

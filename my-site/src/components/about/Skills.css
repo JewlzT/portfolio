@@ -253,6 +253,7 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    
 }
 
 .carousel-indicators {
@@ -281,6 +282,7 @@
     align-items: center;
     gap: 1rem;
     width: 100%;
+    
 }
 
 .carousel-arrow {
@@ -335,11 +337,8 @@
 .carousel-skill-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: 0.5rem;
+    padding: 0rem;
 }
 
 .carousel-skill-logo {
@@ -355,13 +354,13 @@
 
 .carousel-skill-info h4 {
     margin: 0 0 0.25rem 0;
-    color: #6366f1;
+    color: #ffffff;
     font-size: 1rem;
 }
 
 .carousel-skill-info p {
     margin: 0;
-    color: #666;
+    color: #fff5f5;
     font-size: 0.875rem;
     line-height: 1.4;
 }
@@ -371,11 +370,12 @@
 @media (max-width: 699px) {
     .skills-section {
         width: 100%;
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
     }
     
     .skills-container {
         max-width: 100%;
+        padding: 0 1rem;
     }
     
     .skills-content {
