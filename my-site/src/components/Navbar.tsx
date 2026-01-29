@@ -10,7 +10,7 @@ function Navbar() {
     const navigate = useNavigate();
 
     const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-        if (location.pathname === '/contact' || location.pathname === '/coming-soon') {
+        if (location.pathname === '/portfolio/contact' || location.pathname === '/portfolio/coming-soon') {
             e.preventDefault();
             navigate('/portfolio');
             setTimeout(() => {
@@ -45,7 +45,7 @@ function Navbar() {
                                         <li><a href="#projects" onClick={(e) => handleSectionClick(e, 'projects')}>Projects</a></li>
                                         <li><a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a></li>
                                         <li><a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a></li>
-                                        <li className="mobile-contact"><Link to="/contact" onClick={() => setIsMobileNav(false)}>Contact</Link></li>
+                                        <li className="mobile-contact"><Link to="/portfolio/contact" onClick={() => setIsMobileNav(false)}>Contact</Link></li>
                                     </ul>
                                 </nav>
                         </div>
@@ -62,7 +62,7 @@ function Navbar() {
                                 <li><a href="#projects" onClick={(e) => handleSectionClick(e, 'projects')}>Projects</a></li>
                                 <li><a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a></li>
                                 <li><a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a></li>
-                                <li><Link to="/contact">Contact</Link></li>
+                                <li><Link to="/portfolio/contact">Contact</Link></li>
                             </ul>
                         </nav>
                     </div>
@@ -80,7 +80,7 @@ function Navbar() {
                                 <li><a href="#projects" onClick={(e) => handleSectionClick(e, 'projects')}>Projects</a></li>
                                 <li><a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a></li>
                                 <li><a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a></li>
-                                <li><Link to="/contact">Contact</Link></li>
+                                <li><Link to="/portfolio/contact">Contact</Link></li>
                             </ul>
                         </nav>
                     </div>

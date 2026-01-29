@@ -91,7 +91,7 @@ function AboutMe() {
                                     <img src={`${process.env.PUBLIC_URL}/images/about/textbox-aboutme.png`} alt="Textbox"/>
                                     {aboutMeIndex === aboutMeContent.length - 1 ? (
                                         <h3>
-                                            <Link to="/contact">Let's get to know each other!</Link>
+                                            <Link to="/portfolio/contact">Let's get to know each other!</Link>
                                         </h3>
                                     ) : (
                                         <p>{aboutMeContent[aboutMeIndex]}</p>
@@ -162,7 +162,7 @@ function AboutMe() {
                                             <img src={`${process.env.PUBLIC_URL}/images/about/textbox-aboutme.png`} alt="Textbox"/>
                                             {aboutMeIndex === aboutMeContent.length - 1 ? (
                                                 <h3>
-                                                    <Link to="/contact">Let's get to know each other!</Link>
+                                                    <Link to="/portfolio/contact">Let's get to know each other!</Link>
                                                 </h3>
                                             ) : (
                                                 <p>{aboutMeContent[aboutMeIndex]}</p>
