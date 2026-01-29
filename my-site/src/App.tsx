@@ -9,15 +9,15 @@ import ComingSoon from './components/ComingSoon';
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <div className='App'>
       <StarryBackground />
       <Galaxy3DBackground />
       <Navbar/>
         <Routes>
-          <Route path="/" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/contact" element={<Contact />} />
+          <Route path="/portfoliocoming-soon" element={<ComingSoon />} />
         </Routes>
         </div>
     </Router> 
