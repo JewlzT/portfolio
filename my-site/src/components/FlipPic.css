@@ -2,7 +2,6 @@
   background-color: transparent;
   width: 100%;
   height: calc(300px - 2vmin);
-  cursor: pointer;
 }
 
 .flip-pic-inner {
@@ -43,4 +42,5 @@
     height: 90%;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer;
 }

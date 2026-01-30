@@ -4,7 +4,7 @@
     padding: 3rem;
     border: white 2px solid;
     border-radius: 10px;
-    margin: 200px auto 100px auto;
+    margin: 280px auto 100px auto;
     background-color: rgba(255, 255, 255, 0.085);
     color: white;
     position: relative;
@@ -59,7 +59,6 @@
     height: 30px;
     background-image: url('../../public/images/about/small-diamond.png');
     background-repeat: no-repeat;
-    animation-delay: 0.2s;
 }
 
 

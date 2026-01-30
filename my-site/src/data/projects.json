@@ -1,23 +1,23 @@
 {
     "project_data": [
         {
-            "name": "Puter",
-            "image": "/images/projects/puter.png",
-            "alt": "Puter project", 
-            "duration": 7,
-            "type": "Web Application",
-            "teamType": "Open Source",
-            "dateRange": "Sep 2025 - Present",
-            "pageLink": "/portfolio/coming-soon"
-        },
-        {
             "name": "Personal Portfolio",
             "image": "/images/projects/portfolio.png",
             "alt": "Portfolio project",
             "duration": 5,
             "type": "React SPA",
             "teamType": "Individual",
-            "dateRange": "Sep 2025 - Nov 2025",
+            "dateRange": "Nov 2025 - Jan 2026",
+            "pageLink": "/portfolio/coming-soon"
+        },
+        {
+            "name": "Puter",
+            "image": "/images/projects/puter.png",
+            "alt": "Puter project", 
+            "duration": 7,
+            "type": "Web Application",
+            "teamType": "Open Source",
+            "dateRange": "Sep 2025 - Dec 2025",
             "pageLink": "/portfolio/coming-soon"
         },
         {
@@ -32,7 +32,7 @@
         },
         {
             "name": "De-Mystifier", 
-            "image": "/images/projects/sched.png",
+            "image": "/images/projects/demystify.png",
             "alt": "De-Mystifier project",
             "duration": 8,
             "type": "Web Application",
