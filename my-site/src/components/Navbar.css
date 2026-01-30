@@ -3,6 +3,21 @@
     width: 100%;
 }
 
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.navbar-wrapper.hidden {
+    transform: translateY(-100%);
+}
+
 /**************** Mobile ****************/
 
 /* Mobile - Hamburger */
@@ -223,4 +238,18 @@
 .desktop-nav-links nav a:hover::before,
 .desktop-nav-links nav a:hover::after {
     opacity: 1;
+    animation: diamond-twinkle-nav 1.5s ease-in-out infinite;
+}
+
+.desktop-nav-links nav a:hover::before {
+    animation-delay: 0.2s;
+}
+
+@keyframes diamond-twinkle-nav {
+    0%, 100% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 20%;
+    }
 }
