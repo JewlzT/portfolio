@@ -42,9 +42,7 @@ html {
   padding: 2rem 0;
 }
 
-#intro {
-  padding: 7em 0;
-}
+
 
 @media (max-width: 883px){
   #intro {
@@ -59,6 +57,9 @@ html {
 }
 
 @media (min-width: 884px){
+  #intro {
+    padding: 12em 0 7em 0;
+  }
   #experience {
     padding: 5em 0 0 0;
   }

@@ -16,7 +16,18 @@ function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            const navbarHeight = navbarRef.current?.offsetHeight || 80; // fallback to 80px
+            const navbarHeight = navbarRef.current?.offsetHeight || 80;
+            const scrollThreshold = 10; // Prevent bounce-back triggers
+            
+            // Keep navbar visible if at top of page or within threshold
+            if (currentScrollY <= scrollThreshold) {
+                setIsVisible(true);
+                if (hideTimeoutRef.current) {
+                    clearTimeout(hideTimeoutRef.current);
+                }
+                lastScrollY.current = currentScrollY;
+                return;
+            }
             
             if (currentScrollY > lastScrollY.current) {
                 // Scrolling down - hide navbar immediately
@@ -41,7 +52,7 @@ function Navbar() {
                 }
             }
             
-            lastScrollY.current = currentScrollY;
+            lastScrollY.current = currentScrollY <= 0 ? 0 : currentScrollY;
         };
 
         window.addEventListener('scroll', handleScroll);
